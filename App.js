@@ -1,19 +1,28 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View} from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+
+import Apptext from './app/components/AppText';
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ViewImageScreen from './app/screens/ViewImageScreen';
+import Card from './app/components/Card';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    // <WelcomeScreen/>
+    // <ViewImageScreen />
+    <View
+      style = {{
+        width: '100%',
+        height: 400,
+        backgroundColor: '#f8f4f4'
+      }}
+    >
+      <Card
+        title="Red Jacket for sale!"
+        subTitle="$100"
+        image={require('./app/assets/jacket.jpg')}
+      ></Card>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
