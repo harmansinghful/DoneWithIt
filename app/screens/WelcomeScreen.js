@@ -14,8 +14,8 @@ function WelcomeScreen(props) {
                     <Image style={styles.logo} source={require('../assets/logo-red.png')} />
                     <AppText style={styles.text}>Sell What You Don't Need</AppText>
                 </View>
-                <MainButton color="primary">Login</MainButton>
-                <MainButton color="secondary">Register</MainButton>
+                <MainButton color="primary" onPress={() => console.log('tapped')}>Login</MainButton>
+                <MainButton color="secondary" onPress={() => console.log('tapped')}>Register</MainButton>
             </ImageBackground>
         </View>
     );
@@ -42,16 +42,6 @@ const styles = StyleSheet.create({
       height: 100,
       marginBottom: 20,  
     },
-    loginButtons: {
-      width: "100%",
-      flex: 0.8
-    },
-    login: {
-      backgroundColor: colors.primary,
-    },
-    signup: {
-      backgroundColor: colors.secondary,
-    }
   });
 
 export default WelcomeScreen;

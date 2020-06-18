@@ -17,18 +17,17 @@ function Card(props) {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         flexDirection: "column",
         justifyContent: "flex-end",
-        marginTop: 200,
-        marginBottom: 50,
+        marginTop: 50,
         marginHorizontal: 20,
     },
     image: {
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         width: '100%',
-        height: '100%',
+        height: 200,
     },
     textzone: {
         backgroundColor: colors.white,
@@ -38,7 +37,7 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 20
     },
     title: {
-        marginBottom: 10,
+        marginBottom: 5,
     },
     subTitle: {
         color: colors.secondary

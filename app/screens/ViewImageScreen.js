@@ -1,14 +1,16 @@
 import React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+
 import colors from '../config/colors';
 
 function ViewImageScreen(props) {
     return(
         <View style={styles.container}>
             <View style={styles.buttonsView}>
-                <View style={[styles.buttons, styles.close]}></View>
-                <View style={[styles.buttons, styles.save]}></View>
+                <MaterialCommunityIcons name="close" size={30} color="white" />
+                <MaterialCommunityIcons name="trash-can-outline" size={30} color="white" />
             </View>
             <Image source={require('../assets/chair.jpg')} resizeMode="contain" style={styles.image}></Image>
         </View>
@@ -27,16 +29,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         padding: getStatusBarHeight()
-    },
-    buttons: {
-        width: 50,
-        height: 50
-    },
-    close: {
-        backgroundColor: colors.primary,
-    },
-    save: {
-        backgroundColor: colors.secondary,
     },
     image: {
         flex: 9,

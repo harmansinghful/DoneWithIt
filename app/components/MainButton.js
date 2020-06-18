@@ -1,13 +1,13 @@
 import React from 'react';
-import { View, StyleSheet, Text} from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 import colors from '../config/colors';
 
 function MainButton(props) {
     return(
-        <View style={ [ styles.loginButtons, {backgroundColor: colors[props.color]}] }>
+        <TouchableOpacity style={ [ styles.loginButtons, {backgroundColor: colors[props.color]}] } onPress={props.onPress}>
             <Text style={styles.font}>{ props.children }</Text>
-        </View>
+        </TouchableOpacity>
     );
 }
 
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
       },
       font: {
-          fontSize: 16,
+          fontSize: 18,
           textTransform: "uppercase",
           color: colors.white,
           fontWeight: "bold"
